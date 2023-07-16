@@ -1,5 +1,6 @@
 <?php
-   $year = 2003;
+   $year = -2003;
+   echo $year."<br>";
    if ($year < 0) {
       echo 'Lỗi';
    } else {
@@ -8,6 +9,5 @@
     } else {
       echo 'Đây không phải năm nhuận';
     }
-   }
-   
+   }   
  ?>
