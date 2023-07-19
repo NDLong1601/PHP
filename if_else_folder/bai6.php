@@ -12,10 +12,11 @@
     </style>
 </head>
 <body>
+    <div>
     <form action="bai6.php" method='post'>
         <b>Số thứ nhất:</b>
         <input type="number" name="number1">
-        <b>Số thứ hai:</b>
+        <b><br>Số thứ hai:</b>
         <input type="number" name="number2">
         <b><br>Phép tính:</b>
         <input type="radio" name="radio" value="1">+
@@ -24,6 +25,7 @@
         <input type="radio" name="radio" value="4">/<br>
         <button type="submit" name="submit">Tính</button>
     </form>
+    </div>   
 </body>
 </html>
 
@@ -49,6 +51,5 @@
             default:
                 echo "Không xác định !!!";
         }
-
     }
 ?>
