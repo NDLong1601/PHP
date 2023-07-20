@@ -35,6 +35,13 @@
         $number2 = $_POST['number2'];
         $radio = $_POST['radio'];
 
+        function checkNum($number2) {
+            if ($number2 = 0) {
+                throw new Exception ("Số bị chia phải khác 0");
+            }
+            return true;
+        }
+
         switch ($radio) {
             case 1:
                 echo $number1 + $number2;
@@ -46,10 +53,17 @@
                 echo $number1 * $number2;
                 break;
             case 4:
-                echo $number1 / $number2;
+                try {
+                    checkNum($number2);
+                    echo 'Số bị chia phải khác 0 !';
+                } catch(Exception $e) {
+                    echo "Message: ".$e->getMessage();
+                }
+                echo $number1 / $number2;             
                 break;
             default:
                 echo "Không xác định !!!";
+                break;
         }
     }
 ?>
