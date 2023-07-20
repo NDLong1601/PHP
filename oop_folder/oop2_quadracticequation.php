@@ -50,15 +50,25 @@
         $delta = $Hesob * $Hesob - 4 * $Hesoa * $Hesoc;
 
         $ptb2 = new QuadracticEquation($Hesoa,$Hesob,$Hesoc,$delta);
-        echo "Delta: ".$delta."<br>";
-        if ($delta < 0) {
-            echo $ptb2->get_NoSolution()."<br>";
-        } elseif ($delta = 0) {
-            echo $ptb2->get_DoubleRoot()."<br>";
-        } else {
-            echo "Root1:".$ptb2->get_Root1()."<br>";
-            echo "Root2:".$ptb2->get_Root2()."<br>";
-        }
-    }
 
+        if ($Hesoa == 0) {
+            if ($Hesob == 0 && $Hesoc != 0 ) {
+                echo $ptb2->get_NoSolution();
+            } elseif ($Hesob == 0 && $Hesoc == 0) {
+                echo "Phương trình vô số nghiệm";
+            } elseif ($Hesob != 0 && $Hesoc != 0 ) {
+                echo "X: ".-$Hesoc/$Hesob;
+            }
+        } else {
+            echo "Delta: ".$delta."<br>";
+            if ($delta < 0) {
+                echo $ptb2->get_NoSolution()."<br>";
+            } elseif ($delta = 0) {
+                echo $ptb2->get_DoubleRoot()."<br>";
+            } else {
+                echo "Root1:".$ptb2->get_Root1()."<br>";
+                echo "Root2:".$ptb2->get_Root2()."<br>";
+            }
+        }               
+    }
 ?>
