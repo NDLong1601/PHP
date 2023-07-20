@@ -1,5 +1,5 @@
 <?php
-    include_once "rectangle.php";
+    include_once "Rectangle.php";
     class Rectangular extends Rectangle {
         public $height;
         function __construct($height,$length,$width,$name) {
@@ -8,11 +8,11 @@
         }
 
         function calculateArea() {
-            return ($this->length + $this->width) * 2 * $this->height;
+            return parent::calculatePerimeter() * $this->height;
         }
 
         function calculateVolume() {
-            return $this->height * $this->length * $this->width;
+            return parent::calculateArea() * $this->height;
         }
     }
 ?>

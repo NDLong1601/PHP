@@ -1,5 +1,5 @@
 <?php
-    include_once "shape.php";
+    include_once "Shape.php";
     class Rectangle extends Shape {
         public $length;
         public $width;
