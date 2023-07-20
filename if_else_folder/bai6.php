@@ -56,10 +56,11 @@
                 try {
                     checkNum($number2);
                     echo 'Số bị chia phải khác 0 !';
+                    echo $number1 / $number2;
                 } catch(Exception $e) {
                     echo "Message: ".$e->getMessage();
-                }
-                echo $number1 / $number2;             
+                    return ;
+                }            
                 break;
             default:
                 echo "Không xác định !!!";
