@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuỗi đảo ngược</title>
+    <title>Đếm kí tự</title>
     <style>
         button {
             background-color: blueviolet;
@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <form action="Bai6_8.php" method="post">
+    <form action="Bai8.php" method="post">
         <b>Nhập Chuỗi:</b>
         <input type="text" name="string">
         <button type="submit" name="Submit">Submit</button>
